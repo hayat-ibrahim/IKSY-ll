@@ -1,0 +1,11 @@
+{
+    "name": "iksy/kino",
+    "require": {
+        "twbs/bootstrap": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Iksy\\Kino\\": "src/"
+        }
+    }
+}
