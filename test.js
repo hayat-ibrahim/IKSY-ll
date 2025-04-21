@@ -1,0 +1,7 @@
+/**
+ * 
+ */
+ function helloWorld()
+ {
+	alert("Hello");
+ }
