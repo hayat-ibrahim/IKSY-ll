@@ -8,4 +8,5 @@ echo "Fehleranzeige: ". ini_get("upload_max_filesize");
 echo "<br>";
 
 phpinfo();
+echo "Test";
 ?>
