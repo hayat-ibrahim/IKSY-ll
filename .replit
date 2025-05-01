@@ -1,0 +1,20 @@
+modules = ["php-8.2", "web", "nodejs-20"]
+
+[nix]
+channel = "stable-24_05"
+
+[workflows]
+runButton = "PHP Server"
+
+[[workflows.workflow]]
+name = "PHP Server"
+author = 42153447
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "php -S 0.0.0.0:5000"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
