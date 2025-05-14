@@ -1,6 +1,6 @@
 <?php
     //startTemplate.inc.php
-    $ROOT_DIR='/var/www/html/iksy05/Kino';
+    $ROOT_DIR='/home/runner/workspace/Kino';
     require_once("$ROOT_DIR/klassen/smarty/libs/Smarty.class.php");
     $smarty=new Smarty();
     $smarty->setTemplateDir("$ROOT_DIR/smarty/templates/");
