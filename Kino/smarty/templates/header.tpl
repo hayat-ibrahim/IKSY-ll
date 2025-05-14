@@ -13,7 +13,7 @@
 
   <!-- Eigene Styles -->
   <!-- TODO: überprüfen beim Umzug auf VM !!!-->
-  <link rel="stylesheet" href="/Kino/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -24,14 +24,14 @@
     <!-- Logo und Name -->
     <div class="d-flex align-items-center">
       <!-- TODO: überprüfen beim Umzug auf VM !!!!-->
-      <img src="/Kino/imgs/Logo.png" alt="HAR Logo" class="har-logo me-3">
+      <img src="imgs/Logo.png" alt="HAR Logo" class="har-logo me-3">
     </div>
 
     <!-- Navigation -->
     <nav class="d-flex gap-4 justify-content-center align-items-center text-black">
-      <a href="/Kino/index.php" class="nav-link {if $activePage == 'startseite'}active-link {else} unactive-link {/if} rounded-2 p-2 ">Startseite</a>
-      <a href="/Kino/filme.php" class="nav-link {if $activePage == 'filmuebersicht'}active-link {else} unactive-link {/if} rounded-2 p-2 ">Filmübersicht</a>
-      <a href="/Kino/buchung.php" class="nav-link {if $activePage == 'buchung'} active-link {else} unactive-link {/if} rounded-2 p-2 ">Buchung</a>
+      <a href="index.php" class="nav-link {if $activePage == 'startseite'}active-link {else} unactive-link {/if} rounded-2 p-2 ">Startseite</a>
+      <a href="filme.php" class="nav-link {if $activePage == 'filmuebersicht'}active-link {else} unactive-link {/if} rounded-2 p-2 ">Filmübersicht</a>
+      <a href="buchung.php" class="nav-link {if $activePage == 'buchung'} active-link {else} unactive-link {/if} rounded-2 p-2 ">Buchung</a>
     </nav>
 
 		<!--Loginbtn, Warenkorb und Search-->

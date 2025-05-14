@@ -7,7 +7,7 @@
       <div class="hero-text text-white text-center d-flex flex-column align-items-center justify-content-center h-100">
             <h1 class="mb-3">Willkommen im Kinoerlebnis</h1>
             <p class="mb-4">Entdecke aktuelle Blockbuster, zeitlose Klassiker und kommende Highlights</p>
-            <a href="/Kino/filme.php" class="btn btn-lg primary-background">Jetzt Filme entdecken</a>
+            <a href="filme.php" class="btn btn-lg primary-background">Jetzt Filme entdecken</a>
         </div>
     </div>
 

@@ -3,14 +3,14 @@ require_once ("./includes/startTemplate.inc.php");
 
 // Dummy-Daten (später aus DB)
 $filme = [
-    ['id' => 1, 'titel' => 'Matrix', 'bild_url' => '/Kino/imgs/film1.jpg','beschreibung' => 'Ein Hacker entdeckt die wahre Realität.'],
-    ['id' => 2, 'titel' => 'Inception', 'bild_url' => '/Kino/imgs/film2.jpg', 'Träume innerhalb von Träumen.'],
-    ['id' => 3, 'titel' => 'Interstellar', 'bild_url' => '/Kino/imgs/film3.jpg', 'beschreibung' => 'Ein Vater reist durch das Universum.'],
-    ['id' => 4, 'titel' => 'Avatar', 'bild_url' => '/Kino/imgs/film4.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
-    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => '/Kino/imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
-    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => '/Kino/imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
-    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => '/Kino/imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
-    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => '/Kino/imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
+    ['id' => 1, 'titel' => 'Matrix', 'bild_url' => 'imgs/film1.jpg','beschreibung' => 'Ein Hacker entdeckt die wahre Realität.'],
+    ['id' => 2, 'titel' => 'Inception', 'bild_url' => 'imgs/film2.jpg', 'Träume innerhalb von Träumen.'],
+    ['id' => 3, 'titel' => 'Interstellar', 'bild_url' => 'imgs/film3.jpg', 'beschreibung' => 'Ein Vater reist durch das Universum.'],
+    ['id' => 4, 'titel' => 'Avatar', 'bild_url' => 'imgs/film4.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
+    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => 'imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
+    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => 'imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
+    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => 'imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
+    ['id' => 5, 'titel' => 'The Batman', 'bild_url' => 'imgs/film5.jpg','beschreibung' => 'Ein Vater reist durch das Universum.'],
 ];
 
 // Film-ID aus URL holen

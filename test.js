@@ -1,7 +1,0 @@
-/**
- * 
- */
- function helloWorld()
- {
-	alert("Hello");
- }
