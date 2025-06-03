@@ -18,7 +18,7 @@
     {foreach $filme as $film}
       <div class="col d-flex justify-content-center">
         <div class="card h-100">
-          <img src="{$film.bild_url}" class="card-img-top" alt="{$film.titel}">
+          <img src="{$film.bild_link}" class="card-img-top" alt="{$film.titel}">
           <div class="card-body d-flex flex-column align-items-center ">
             <h3 class="card-title">{$film.titel}</h5>
             <a href="film_details.php?id={$film.id}" class="btn btn-md primary-background">Filmdetails</a>

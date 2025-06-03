@@ -4,7 +4,7 @@
   <div class="row mb-5 mr-3">
     <!-- Bild links (1/3) -->
     <div class="col-md-4">
-      <img src="{$film.bild_url}" alt="{$film.titel}" class="img-fluid rounded shadow" style="object-fit: contain; width: 100%; max-height: 500px;">
+      <img src="{$film.bild_link}" alt="{$film.titel}" class="img-fluid rounded shadow" style="object-fit: contain; width: 100%; max-height: 500px;">
     </div>
   
     <!-- Textinhalt rechts (2/3) -->

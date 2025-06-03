@@ -1,7 +1,7 @@
 </div>
 
 <!-- Ende Container -->
-	<footer class="bg-dark text-white text-center p-3 mt-3 d-flex justify-content-center"> 
+	<footer class="primary-background text-white text-center p-3 mt-3 d-flex justify-content-center"> 
 		<div>
 			&copy; 2025 Kino-Projekt	Hayat - Amani - Rouya </br>
 			<a 

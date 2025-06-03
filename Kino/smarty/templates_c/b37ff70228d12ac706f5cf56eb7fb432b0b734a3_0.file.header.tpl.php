@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2025-05-14 20:39:08
+/* Smarty version 4.3.2, created on 2025-06-03 19:43:12
   from '/var/www/html/iksy05/Kino/smarty/templates/header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_6824ff6c59c5c9_80674081',
+  'unifunc' => 'content_683f50501fde02_43018694',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'b37ff70228d12ac706f5cf56eb7fb432b0b734a3' => 
     array (
       0 => '/var/www/html/iksy05/Kino/smarty/templates/header.tpl',
-      1 => 1747254785,
+      1 => 1748979787,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6824ff6c59c5c9_80674081 (Smarty_Internal_Template $_smarty_tpl) {
+function content_683f50501fde02_43018694 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="de">
 <head>
@@ -43,7 +43,7 @@ function content_6824ff6c59c5c9_80674081 (Smarty_Internal_Template $_smarty_tpl)
 
 <!-- HEADER -->
 <header class="p-3">
-  <div class="container d-flex justify-content-between align-items-center">
+  <div class="container d-flex justify-content-between gap-3 align-items-center flex-wrap">
 	
     <!-- Logo und Name -->
     <div class="d-flex align-items-center">
@@ -52,7 +52,7 @@ function content_6824ff6c59c5c9_80674081 (Smarty_Internal_Template $_smarty_tpl)
     </div>
 
     <!-- Navigation -->
-    <nav class="d-flex gap-4 justify-content-center align-items-center text-black">
+    <nav class="d-flex gap-4 justify-content-center align-items-center text-black p-2">
       <a href="index.php" class="nav-link <?php if ($_smarty_tpl->tpl_vars['activePage']->value == 'startseite') {?>active-link <?php } else { ?> unactive-link <?php }?> rounded-2 p-2 ">Startseite</a>
       <a href="filme.php" class="nav-link <?php if ($_smarty_tpl->tpl_vars['activePage']->value == 'filmuebersicht') {?>active-link <?php } else { ?> unactive-link <?php }?> rounded-2 p-2 ">Filmübersicht</a>
       <a href="buchung.php" class="nav-link <?php if ($_smarty_tpl->tpl_vars['activePage']->value == 'buchung') {?> active-link <?php } else { ?> unactive-link <?php }?> rounded-2 p-2 ">Buchung</a>

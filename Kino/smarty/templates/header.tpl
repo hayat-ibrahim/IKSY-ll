@@ -19,7 +19,7 @@
 
 <!-- HEADER -->
 <header class="p-3">
-  <div class="container d-flex justify-content-between align-items-center">
+  <div class="container d-flex justify-content-between gap-3 align-items-center flex-wrap">
 	
     <!-- Logo und Name -->
     <div class="d-flex align-items-center">
@@ -28,7 +28,7 @@
     </div>
 
     <!-- Navigation -->
-    <nav class="d-flex gap-4 justify-content-center align-items-center text-black">
+    <nav class="d-flex gap-4 justify-content-center align-items-center text-black p-2">
       <a href="index.php" class="nav-link {if $activePage == 'startseite'}active-link {else} unactive-link {/if} rounded-2 p-2 ">Startseite</a>
       <a href="filme.php" class="nav-link {if $activePage == 'filmuebersicht'}active-link {else} unactive-link {/if} rounded-2 p-2 ">Filmübersicht</a>
       <a href="buchung.php" class="nav-link {if $activePage == 'buchung'} active-link {else} unactive-link {/if} rounded-2 p-2 ">Buchung</a>
