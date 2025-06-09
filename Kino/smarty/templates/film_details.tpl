@@ -13,13 +13,16 @@
         <h1>{$film.titel}</h1>
         <p class="lead">{$film.beschreibung}</p>
       </div>
-      <div class="mt-4">
+      <div class="mt-4 d-flex gap-2">
         <a href="filme.php" class="btn btn-secondary">← Zurück zur Übersicht</a>
+
+        <!-- In den Warenkorb Button -->
+        <a href="warenkorb.php?action=add&id={$film.id}" class="btn primary-background">
+          🛒 In den Warenkorb
+        </a>
       </div>
     </div>
   </div>
-
-
 </div>
 
 {include file="footer.tpl"}
