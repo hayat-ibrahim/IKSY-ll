@@ -6,6 +6,7 @@ require_once ('./klassen/FilmeUebersicht.inc.php');
 require_once ('./klassen/Sicherheit.inc.php');
 
 // Dummy-Daten (später aus DB)
+// Dummy-Daten (später aus DB)
 $db = DbFunctions::connectWithDatabase(); // <== richtige Verbindung aufbauen
 
 $filme = FilmeUebersicht::holeFilme($db);
