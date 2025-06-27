@@ -1,36 +1,34 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verifizierung - HAR</title>
-    <link rel="stylesheet" href="Verifizierungsseite.css">
-</head>
-<body>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<div class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+  <div class="card text-center shadow p-4" style="max-width: 400px; width: 100%;">
+    <h5 class="card-title text-danger">Verifizierung</h5>
+    
+    {if !$erfolgreich}  <!-- Nur anzeigen, wenn nicht erfolgreich verifiziert -->
+      <p class="card-text">Bitte rechne die folgende Aufgabe:</p>
+      <h4 class="fw-bold">{$zahl1} + {$zahl2} = ?</h4>
 
-    <div class="logo-container">
-        <img src="logo.png" alt="HAR Logo">
-    </div>
-
-    <div class="container">
-        <div class="form-wrapper">
-            <h1>Verifizierung erforderlich</h1>
-            <p>Um sicherzustellen, dass du kein Bot bist,<br> beantworte bitte die folgende Frage:</p>
-
-            <form action="verifizieren.php" method="post">
-                <h2 style="margin-top: 20px;">3 + 5 =</h2>
-                <input type="text" name="captcha" placeholder="Antwort eingeben" required style="margin: 20px 0;">
-                <button type="submit">Überprüfen</button>
-            </form>
+      <form method="post">
+        <div class="mb-3">
+          <input type="text" name="captcha" class="form-control" placeholder="Antwort eingeben" required>
         </div>
+        <button type="submit" class="btn btn-danger w-100">Bestätigen</button>
+      </form>
+    {/if}
 
-        <footer class="footer">
-            <div class="footer-content">
-                HAR – Kinoerlebnis neu erleben
-            </div>
-        </footer>
-    </div>
+    {if $meldung}
+      <div class="alert mt-3 {if $erfolgreich}alert-success{else}alert-warning{/if}">
+        {$meldung}
+      </div>
+      {if $erfolgreich}
+        <script>
+          setTimeout(function() {
+            window.location.href = "login.php";  // Weiterleitung nach 3 Sekunden
+          }, 3000);  // 3 Sekunden Verzögerung
+        </script>
+      {/if}
+    {/if}
 
-</body>
-</html>
+  </div>
+</div>

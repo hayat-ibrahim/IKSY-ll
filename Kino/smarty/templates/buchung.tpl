@@ -5,9 +5,7 @@
 
     <!-- Titel -->
     <h2 style="text-align: center; margin-bottom: 0.5rem;">Ticket buchen</h2>
-		<p style="text-align: center; font-size: 1.2rem;">
- 		 <strong>Gesamtpreis:</strong> <span class="preis">{$gesamtpreis}</span>
-		</p>
+    <p style="text-align: center; font-size: 1.2rem;"><strong>Gesamtpreis:</strong> <span class="preis">{$gesamtpreis}</span></p>
 
     <form method="post" action="buchung.php" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
       
@@ -37,17 +35,12 @@
       </div>
 
       <!-- AGB -->
-      <!-- AGB -->
-	<div class="agb" style="margin-top: 1.5rem; font-size: 0.95rem;">
-  	<label>
-    	<input type="checkbox" name="agb" required>
-    	Ich akzeptiere die <a href="#" style="color: white; text-decoration: underline;">AGB</a>
-  	</label>
- 	 <p style="font-size: 0.85rem; margin-top: 0.3rem; color: #eee;">
-   		 Mit der Bestätigung akzeptieren Sie unsere Allgemeinen Geschäftsbedingungen und Datenschutzerklärung.
- 	 </p>
-	</div>
-
+      <div class="agb" style="margin-top: 1.5rem; font-size: 0.95rem;">
+        <label>
+          <input type="checkbox" name="agb" required>
+          Ich akzeptiere die <a href="#" style="color: white; text-decoration: underline;">AGB</a>
+        </label>
+      </div>
 
       <!-- Button -->
       <div style="text-align: center; margin-top: 2rem;">
@@ -59,23 +52,5 @@
     </form>
   </div>
 </div>
-
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const radioButtons = document.querySelectorAll('input[name="zahlung"]');
-  radioButtons.forEach(radio => {
-    radio.addEventListener('change', function() {
-      if (this.value === 'Überweisung') {
-        const preisElement = document.querySelector('.preis');
-        const preisText = preisElement ? preisElement.textContent.trim() : '';
-        const url = 'rechnung.php?gesamtpreis=' + encodeURIComponent(preisText);
-        window.open(url, '_blank');
-      }
-    });
-  });
-});
-</script>
-
 
 {include file="footer.tpl"}

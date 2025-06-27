@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2025-06-03 20:14:32
+/* Smarty version 4.3.2, created on 2025-06-17 15:37:13
   from '/var/www/html/iksy05/Kino/smarty/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_683f57a8c48187_53090944',
+  'unifunc' => 'content_68518ba943a2b2_56472351',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79bcd83e292b7ccb23ce8442e0cfa367889954a1' => 
     array (
       0 => '/var/www/html/iksy05/Kino/smarty/templates/index.tpl',
-      1 => 1748981668,
+      1 => 1750174630,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_683f57a8c48187_53090944 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68518ba943a2b2_56472351 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <body class="m-0">
@@ -47,7 +47,7 @@ $_smarty_tpl->tpl_vars['film']->do_else = false;
 ?>
         <div class="col d-flex justify-content-center">
           <div class="card h-100 m-2 p-2" style="width: 400px;">
-            <img src="<?php echo $_smarty_tpl->tpl_vars['film']->value['bild_link'];?>
+            <img src="./<?php echo $_smarty_tpl->tpl_vars['film']->value['bild_link'];?>
 " class="card-img-top" alt="<?php echo $_smarty_tpl->tpl_vars['film']->value['titel'];?>
 ">
             <div class="card-body d-flex flex-column align-items-center ">

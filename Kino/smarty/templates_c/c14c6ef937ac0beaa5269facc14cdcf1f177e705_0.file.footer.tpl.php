@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2025-06-15 00:00:33
+/* Smarty version 4.3.2, created on 2025-06-21 09:27:19
   from '/var/www/html/iksy05/Kino/smarty/templates/footer.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_684e0d2138a154_60039178',
+  'unifunc' => 'content_68567af7ba57a7_80543838',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'c14c6ef937ac0beaa5269facc14cdcf1f177e705' => 
     array (
       0 => '/var/www/html/iksy05/Kino/smarty/templates/footer.tpl',
-      1 => 1749945629,
+      1 => 1750498028,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_684e0d2138a154_60039178 (Smarty_Internal_Template $_smarty_tpl) {
+function content_68567af7ba57a7_80543838 (Smarty_Internal_Template $_smarty_tpl) {
 ?></div> <!-- ggf. ein schließendes DIV vom Haupt-Container -->
 
 
-<!-- Datenschutz Modal (automatisch bei Seitenstart) -->
+<!-- Datenschutz Modal -->
 <div class="modal fade" id="datenschutzModal" tabindex="-1" aria-labelledby="datenschutzLabel" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content">
@@ -36,7 +36,8 @@ function content_684e0d2138a154_60039178 (Smarty_Internal_Template $_smarty_tpl)
           Diese Website verwendet nur technisch notwendige Cookies und speichert keine personenbezogenen Daten ohne deine Zustimmung.
         </p>
         <p>
-          Mit deiner Zustimmung erklärst du dich mit unserer <a href="#" class="text-decoration-underline">Datenschutzerklärung</a> einverstanden.
+          Mit deiner Zustimmung erklärst du dich mit unserer 
+          <a href="datenschutz.php" class="text-decoration-underline" target="_blank">Datenschutzerklärung</a> einverstanden.
         </p>
 
         <div class="form-check mt-4">
@@ -54,42 +55,60 @@ function content_684e0d2138a154_60039178 (Smarty_Internal_Template $_smarty_tpl)
 </div>
 
 <!-- Footer -->
-<footer class="primary-background text-white text-center p-3 mt-3 d-flex justify-content-center"> 
+<footer style="background-color: #9F2225; color: white;" class="text-center p-3 mt-3 d-flex justify-content-center"> 
   <div>
-    &copy; 2025 Kino-Projekt Hayat - Amani - Rouya<br>
+    &copy; 2025 Kino-Projekt – Hayat • Amani • Rouya<br>
     <a 
       href="#" 
-      class="link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover"
-      data-bs-toggle="modal" 
-      data-bs-target="#datenschutzModal"
+      id="openPrivacyLink"
+      style="color: white; text-decoration: none;"
+      onmouseover="this.style.textDecoration='underline';" 
+      onmouseout="this.style.textDecoration='none';"
     >
       Datenschutz
     </a>
   </div>
 </footer>
 
-<!-- Bootstrap JS + Modal Init Script -->
+<!-- Bootstrap + Script -->
 <?php echo '<script'; ?>
  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"><?php echo '</script'; ?>
 >
 <?php echo '<script'; ?>
 >
-  // Show modal on page load
   window.addEventListener('load', function () {
-    var modal = new bootstrap.Modal(document.getElementById('datenschutzModal'));
-    modal.show();
-
-    // Enable button only when checkbox is checked
+    const modalEl = document.getElementById('datenschutzModal');
+    const modal = new bootstrap.Modal(modalEl);
     const checkbox = document.getElementById('acceptPrivacy');
     const button = document.getElementById('acceptButton');
+    const openLink = document.getElementById('openPrivacyLink');
 
+    const showModal = () => {
+      checkbox.checked = false;
+      button.disabled = true;
+      modal.show();
+    };
+
+    // 1. Zeige Modal automatisch nur einmal
+    if (!localStorage.getItem('privacyAccepted')) {
+      showModal();
+    }
+
+    // 2. Button aktivieren, wenn Checkbox angeklickt
     checkbox.addEventListener('change', () => {
       button.disabled = !checkbox.checked;
     });
 
+    // 3. Akzeptieren speichern
     button.addEventListener('click', () => {
+      localStorage.setItem('privacyAccepted', 'true');
       modal.hide();
-      // Optional: localStorage.setItem('privacyAccepted', 'true');
+    });
+
+    // 4. Zeige Modal erneut, wenn auf "Datenschutz"-Link geklickt wird
+    openLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      showModal();
     });
   });
 <?php echo '</script'; ?>

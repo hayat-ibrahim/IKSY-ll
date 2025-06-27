@@ -3,8 +3,7 @@
 <div class="container d-flex justify-content-center align-items-center" style="min-height: 85vh;">
   <div style="background-color: #9F2225; color: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 100%; max-width: 400px;">
         <h2 class="text-center mb-3">Jetzt anmelden</h2>
-        <p class="text-center">Wenn du schon ein Konto hast, dann melde dich jetzt an.</p>
-        <p class="text-center">Falls nicht, klicke jetzt auf "Registrieren".</p>
+     
 
         {if $loginSuccess}
             <div class="alert alert-success text-center fw-bold mt-3">

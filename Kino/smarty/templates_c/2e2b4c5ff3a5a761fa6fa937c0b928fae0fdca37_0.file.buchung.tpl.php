@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2025-06-14 23:05:53
+/* Smarty version 4.3.2, created on 2025-06-27 12:56:29
   from '/var/www/html/iksy05/Kino/smarty/templates/buchung.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_684e0051c0b9c0_65646018',
+  'unifunc' => 'content_685e94fdeec304_78825571',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2e2b4c5ff3a5a761fa6fa937c0b928fae0fdca37' => 
     array (
       0 => '/var/www/html/iksy05/Kino/smarty/templates/buchung.tpl',
-      1 => 1749942293,
+      1 => 1751028938,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_684e0051c0b9c0_65646018 (Smarty_Internal_Template $_smarty_tpl) {
+function content_685e94fdeec304_78825571 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
@@ -31,10 +31,8 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
 
     <!-- Titel -->
     <h2 style="text-align: center; margin-bottom: 0.5rem;">Ticket buchen</h2>
-		<p style="text-align: center; font-size: 1.2rem;">
- 		 <strong>Gesamtpreis:</strong> <span class="preis"><?php echo $_smarty_tpl->tpl_vars['gesamtpreis']->value;?>
-</span>
-		</p>
+    <p style="text-align: center; font-size: 1.2rem;"><strong>Gesamtpreis:</strong> <span class="preis"><?php echo $_smarty_tpl->tpl_vars['gesamtpreis']->value;?>
+</span></p>
 
     <form method="post" action="buchung.php" style="flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between;">
       
@@ -64,17 +62,12 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
       </div>
 
       <!-- AGB -->
-      <!-- AGB -->
-	<div class="agb" style="margin-top: 1.5rem; font-size: 0.95rem;">
-  	<label>
-    	<input type="checkbox" name="agb" required>
-    	Ich akzeptiere die <a href="#" style="color: white; text-decoration: underline;">AGB</a>
-  	</label>
- 	 <p style="font-size: 0.85rem; margin-top: 0.3rem; color: #eee;">
-   		 Mit der Bestätigung akzeptieren Sie unsere Allgemeinen Geschäftsbedingungen und Datenschutzerklärung.
- 	 </p>
-	</div>
-
+      <div class="agb" style="margin-top: 1.5rem; font-size: 0.95rem;">
+        <label>
+          <input type="checkbox" name="agb" required>
+          Ich akzeptiere die <a href="#" style="color: white; text-decoration: underline;">AGB</a>
+        </label>
+      </div>
 
       <!-- Button -->
       <div style="text-align: center; margin-top: 2rem;">
@@ -86,26 +79,6 @@ $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_sm
     </form>
   </div>
 </div>
-
-
-<?php echo '<script'; ?>
->
-document.addEventListener('DOMContentLoaded', function() {
-  const radioButtons = document.querySelectorAll('input[name="zahlung"]');
-  radioButtons.forEach(radio => {
-    radio.addEventListener('change', function() {
-      if (this.value === 'Überweisung') {
-        const preisElement = document.querySelector('.preis');
-        const preisText = preisElement ? preisElement.textContent.trim() : '';
-        const url = 'rechnung.php?gesamtpreis=' + encodeURIComponent(preisText);
-        window.open(url, '_blank');
-      }
-    });
-  });
-});
-<?php echo '</script'; ?>
->
-
 
 <?php $_smarty_tpl->_subTemplateRender("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 }
