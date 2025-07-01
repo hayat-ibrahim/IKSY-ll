@@ -18,8 +18,8 @@
         <div class="col d-flex justify-content-center">
           <div class="card h-100 m-2 p-2" style="width: 400px;">
             <img src="./{$film.bild_link}" class="card-img-top" alt="{$film.titel}">
-            <div class="card-body d-flex flex-column align-items-center ">
-              <h3 class="card-title">{$film.titel}</h5>
+            <div class="card-body d-flex flex-column align-items-center justify-content-between">
+              <h5 class="card-title">{$film.titel}</h5>
               <a href="film_details.php?id={$film.id}" class="btn btn-md primary-background">Filmdetails</a>
             </div>
           </div>

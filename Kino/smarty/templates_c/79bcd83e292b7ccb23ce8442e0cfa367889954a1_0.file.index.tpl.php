@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.2, created on 2025-06-17 15:37:13
+/* Smarty version 4.3.2, created on 2025-07-01 19:39:08
   from '/var/www/html/iksy05/Kino/smarty/templates/index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.2',
-  'unifunc' => 'content_68518ba943a2b2_56472351',
+  'unifunc' => 'content_6864395c2b5e47_73755433',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '79bcd83e292b7ccb23ce8442e0cfa367889954a1' => 
     array (
       0 => '/var/www/html/iksy05/Kino/smarty/templates/index.tpl',
-      1 => 1750174630,
+      1 => 1751398743,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:footer.tpl' => 1,
   ),
 ),false)) {
-function content_68518ba943a2b2_56472351 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6864395c2b5e47_73755433 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_subTemplateRender("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 <body class="m-0">
@@ -50,8 +50,8 @@ $_smarty_tpl->tpl_vars['film']->do_else = false;
             <img src="./<?php echo $_smarty_tpl->tpl_vars['film']->value['bild_link'];?>
 " class="card-img-top" alt="<?php echo $_smarty_tpl->tpl_vars['film']->value['titel'];?>
 ">
-            <div class="card-body d-flex flex-column align-items-center ">
-              <h3 class="card-title"><?php echo $_smarty_tpl->tpl_vars['film']->value['titel'];?>
+            <div class="card-body d-flex flex-column align-items-center justify-content-between">
+              <h5 class="card-title"><?php echo $_smarty_tpl->tpl_vars['film']->value['titel'];?>
 </h5>
               <a href="film_details.php?id=<?php echo $_smarty_tpl->tpl_vars['film']->value['id'];?>
 " class="btn btn-md primary-background">Filmdetails</a>

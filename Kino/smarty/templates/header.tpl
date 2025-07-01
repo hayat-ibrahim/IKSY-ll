@@ -13,15 +13,17 @@
   <!-- Eigene Styles -->
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-<!-- HEADER -->
+<!-- Header -->
 <header class="p-3">
   <div class="container d-flex justify-content-between gap-3 align-items-center flex-wrap">
   
-    <!-- Logo und Name -->
+    <!-- Logo/Name -->
     <div class="d-flex align-items-center">
-      <img src="imgs/Logo.png" alt="HAR Logo" class="har-logo me-3">
+      <a href= "/iksy05/Kino/index.php">
+      	<img src="imgs/Logo.png" alt="HAR Logo" class="har-logo me-3">
+      </a>
+      
     </div>
 
     <!-- Navigation -->
@@ -32,17 +34,17 @@
     </nav>
 
    <!-- Login/Logout, Warenkorb und Suche -->
-<div class="d-flex justify-content-center align-items-center gap-3 m-2">
-  <a href="warenkorb.php" class="fs-4 text-black" title="Warenkorb">
-    <i class="bi bi-bag-fill"></i>
-  </a>
+	<div class="d-flex justify-content-center align-items-center gap-3 m-2">
+  		<a href="warenkorb.php" class="fs-4 text-black" title="Warenkorb">
+    		<i class="bi bi-bag-fill"></i>
+  		</a>
 
-  {if $eingeloggt}
-    <a href="logout.php" class="btn btn-sm btn-dark">Logout</a>
-  {else}
-    <a href="login.php" class="btn btn-sm btn-dark">Login</a>
-  {/if}
-</div>
+ 	 	{if $eingeloggt}
+   		 	<a href="logout.php" class="btn btn-sm btn-dark">Logout</a>
+  		{else}
+    		<a href="login.php" class="btn btn-sm btn-dark">Login</a>
+ 	 	{/if}
+	</div>
    
    
    
