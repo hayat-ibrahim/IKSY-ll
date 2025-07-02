@@ -6,12 +6,8 @@ $gesamtpreis = $_GET['gesamtpreis'] ?? '0,00 €';
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <title>Rechnung | HAR Kino</title>
   <style>
-    /* Reset & Grundstil */
-    * {
-      box-sizing: border-box;
-    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f8f8f8;
@@ -27,23 +23,30 @@ $gesamtpreis = $_GET['gesamtpreis'] ?? '0,00 €';
       border-radius: 8px;
       box-shadow: 0 6px 18px rgba(0,0,0,0.1);
     }
-
+    
     header {
-      text-align: center;
+      position: relative;
       margin-bottom: 2rem;
       border-bottom: 2px solid #9F2225;
       padding-bottom: 1rem;
+      font-size: 5rem;
+      text-align: center;
     }
-    header img {
-      max-height: 60px;
-      margin-bottom: 0.5rem;
-    }
+    
     header h1 {
       margin: 0;
       color: #9F2225;
-      font-weight: 700;
+      font-weight: 650;
       font-size: 2rem;
     }
+    
+    header img {
+      position: absolute;
+      top: 1px;         
+      left: 10px;    
+      max-height: 50px; 
+    }
+
 
     .details {
       margin-bottom: 2rem;
@@ -83,7 +86,7 @@ $gesamtpreis = $_GET['gesamtpreis'] ?? '0,00 €';
       }
     }
 
-    /* WICHTIG: Button beim Drucken ausblenden */
+  
     @media print {
       button {
         display: none !important;
@@ -94,8 +97,7 @@ $gesamtpreis = $_GET['gesamtpreis'] ?? '0,00 €';
 <body>
   <div class="container">
     <header>
-      <!-- Optional: Logo einfügen -->
-      <!-- <img src="imgs/har_kino_logo.png" alt="HAR Kino Logo" /> -->
+      <img src="imgs/Logo.png" alt="HAR Kino Logo" />
       <h1>Rechnung</h1>
     </header>
 

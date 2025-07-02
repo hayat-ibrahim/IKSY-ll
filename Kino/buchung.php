@@ -11,8 +11,8 @@ $gesamtpreis = (!empty($warenkorb) && is_array($warenkorb)) ? PreisBerechnung::b
 $gesamtpreisString = number_format($gesamtpreis, 2, ',', '') . ' €';
 
 // Formular wurde abgeschickt
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $zahlung = $_POST['zahlung'] ?? '';
+if ($_SERVER["REQUEST_METHOD"] === "POST") {   
+    $zahlung = $_POST['zahlung'] ?? '';  
     $agb = isset($_POST['agb']);
     
     // Wenn alles korrekt

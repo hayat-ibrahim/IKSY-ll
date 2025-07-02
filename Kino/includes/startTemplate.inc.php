@@ -1,5 +1,4 @@
 <?php
-// startTemplate.inc.php
 
 $ROOT_DIR = '/var/www/html/iksy05/Kino';
 
@@ -17,10 +16,10 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Login-Status prüfen (zentral)
-$isLoggedIn = isset($_SESSION['user']);// Beispiel: Wenn Benutzer eingeloggt ist, setze $isLoggedIn = true, sonst false
+$isLoggedIn = isset($_SESSION['user']);
 $benutzerEmail = $_SESSION['user'] ?? '';
 
 // Smarty-Variablen übergeben – zentral für ALLE Templates
-$smarty->assign('isLoggedIn', $isLoggedIn);       // Alt (wenn du das noch brauchst)
-$smarty->assign('eingeloggt', $isLoggedIn);       // Neu (für header.tpl)
-$smarty->assign('benutzerEmail', $benutzerEmail); // Benutzer anzeigen im Template
+$smarty->assign('isLoggedIn', $isLoggedIn);       
+$smarty->assign('eingeloggt', $isLoggedIn);       
+$smarty->assign('benutzerEmail', $benutzerEmail); 

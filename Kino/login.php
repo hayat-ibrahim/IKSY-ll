@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($kunde && password_verify($password, $kunde['passwort'])) {
       
         $_SESSION['user'] = $kunde['email'];
-        $_SESSION['nutzer_id'] = $kunde['id']; // <- HIER ist die wichtige Zeile
+        $_SESSION['nutzer_id'] = $kunde['id']; 
 
         $loginErfolgreich = true;
 

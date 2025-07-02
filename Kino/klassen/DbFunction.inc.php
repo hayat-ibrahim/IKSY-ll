@@ -66,11 +66,7 @@ class DbFunctions {
     {
         return (mysqli_error($link));
     }
-    /*
-     * Wenn magic_qotes_gpc konfiguriert ist, werden Anführungszeichen mit Backslashes geschützt
-     * Allerdings ist die mysqli_real_escape_string noch sicherer, daher werden die Backslashes in diesem Fall
-     * wieder entfernt, damit immer die o.g. Funktion aufgerufen werden kann.
-     */
+    
     public static function escape($link, $str) {
         if (ini_get('magic_quotes_gpc')) {
             $str = stripslashes($str);

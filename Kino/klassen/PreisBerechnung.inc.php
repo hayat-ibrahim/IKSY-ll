@@ -22,16 +22,7 @@ class PreisBerechnung
         
         return $gesamt;
     }
-    
-    // Beispielhafte Speichern-Funktionen
-    public static function speichereBuchung(array $tickets, $nutzerId, $zahlungsmethode)
-    {
-        $link = DbFunctions::connectWithDatabase();
-        foreach ($tickets as $ticket) {
-            // Speichern der Einzelbuchungen
-           // (Implementierung abhängig vom Datenbankmodell)
-        }
-    }
+  
     
     
     

@@ -30,12 +30,7 @@ class Sicherheit {
         return false;
     }
     
-    static function isCorrectWinterart($str) {
-        if ($str == 'mild' || $str == 'normal' || $str == 'streng'||$str=='sehr streng') {
-            return true;
-        }
-        return false;
-    }
+ 
     
 }
 ?>
